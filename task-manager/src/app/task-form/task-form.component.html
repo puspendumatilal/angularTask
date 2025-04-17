@@ -1,0 +1,8 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+    <input formControlName="title" placeholder="Task Title" />
+    <input formControlName="description" placeholder="Task Description" />
+    <button type="submit" [disabled]="taskForm.invalid">
+      {{ isEditMode ? 'Edit' : 'Add' }} Task
+    </button>
+  </form>
+  
